@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+.menu-icon {
+  margin: 60px auto;
+  width: 40px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-icon span {
+  background-color: black;
+  height: 4px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.menu-icon span:first-child {
+  top: -5px;
+}
+.menu-icon span:nth-child(2) {
+  top: 4px;
+}
+.menu-icon span:last-child {
+  top: 13px;
+}
+.menu-icon:hover span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon:hover span:first-child,
+.menu-icon:hover span:last-child {
+  top: 6px;
+  background-color: red;
+}
+.menu-icon:hover span:first-child {
+  transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+  transform: rotate(-45deg);
+}
